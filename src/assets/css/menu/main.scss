@@ -1,0 +1,189 @@
+.main-box {
+    position: relative;
+    width: 100%;
+    color: #333;
+    .el-dropdown-link:focus-within {
+        border: 0;
+        outline: 0;
+    }
+    .header-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-width: 1204px;
+        z-index: 99;
+        height: 70px;
+        box-shadow: 0 0 3px #999999;
+        background-color: #FFFFFF;
+        .company {
+            float: left;
+            //line-height: 70px;
+            text-align: center;
+            width: 212px;
+            height: 17px;
+            margin-top: 26px;
+            margin-left: 10px;
+        }
+        .companyPoint{
+            width: 34px;
+            height: 36px;
+            float: left;
+            margin-top: 16px;
+            margin-left: 23px;
+            //line-height: 70px;
+            text-align: center;
+        }
+        .briefing-btn {
+            float: right;
+            margin-right: 20px;
+            line-height: 71px;
+            font-size: 19px;
+            color: #2A2A2A;
+        }
+        .user {
+            float: right;
+            //margin-right: 150px;
+            margin-right: 15px;
+            margin-top: 28px;
+            //line-height: 70px;
+        }
+        .loginUserHead{
+            width: 40px;
+            height: 40px;
+            background-color: #cdd4de;
+            //border:1px solid salmon;
+            float: right;
+            border-radius: 50%;
+            margin-right: 47px;
+            margin-top: 15px;
+        }
+    }
+    .left-menu-wrap {
+        position: fixed;
+        left: 0;
+        //top: 0px;
+        top: 70px;
+        z-index: 999;
+        height: 100%;
+        //background: #272454;
+        background-color: #1c2327;
+        overflow-x: hidden;
+        //overflow-y: auto;
+        overflow-y: scroll;
+        padding-bottom: 100px;
+        // -ms-overflow-style:none;
+        // overflow:-moz-scrollbars-none;
+        .leftNav {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .left-arrow {
+            //border-top: solid 1px #27154a;
+            //border-bottom: solid 1px #27154a;
+            background-color: #1c2327;
+            .arrow-wrap {
+                //border-top: solid 1px #253460;
+                //border-bottom: solid 1px #253460;
+                //background-color: #272454;
+                background-color: #1c2327;
+                border-bottom: solid 1px #31383d;
+                margin-bottom: 0;
+                text-align: center;
+                line-height: 16px;
+            }
+            .moveImg {
+                animation: movement 2s linear infinite;
+                margin-bottom: 10px;
+            }
+            @keyframes movement {
+                0% {
+                    transform: translate(0, 0)
+                }
+                33% {
+                    transform: translate(-2px, 0)
+                }
+                66% {
+                    transform: translate(2px, 0)
+                }
+                100% {
+                    transform: translate(0, 0)
+                }
+            }
+        }
+    }
+    .left-menu-wrap::-webkit-scrollbar {
+        width: 8px;
+        /*高宽分别对应横竖滚动条的尺寸*/
+    }
+    .left-menu-wrap::-webkit-scrollbar-thumb {
+        /*滚动条里面小方块*/
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        background: #D2D2D2;
+        border-radius: 10px;
+    }
+    .left-menu-wrap::-webkit-scrollbar-track {
+        /*滚动条里面轨道*/
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        background: #FFFFFF;
+    }
+    .content-wrap {
+        position: relative;
+        background-color: #fff;
+        top: 80px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        padding: 30px 30px 0 30px;
+
+    }
+}
+
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 160px;
+}
+
+.el-menu {
+    border: 0;
+}
+
+.left70 {
+    padding-left: 70px;
+}
+
+.left160 {
+    padding-left: 160px;
+}
+
+.ml90 {
+    margin-left: 90px;
+}
+
+.ml190 {
+    //margin-left: 190px;
+    margin-left: 0px;
+}
+
+.topMenuStyle:hover{
+    background-color: #f8fafd !important;
+}
+.topMenuStyle{
+    font-size: 16px;
+    line-height: 70px;
+    text-align: center;
+    letter-spacing: 6.2px;
+    font-family: MicrosoftYaHeiLight;
+}
+
+.el-menu--horizontal>.el-menu-item.is-active{
+    background-color: #f8f8f8 !important;
+    border-bottom: 3px solid;
+}
+
+//ui公用
+.el-button--primary{
+    color: #fff;
+    background-color: #548fe7;
+    border-color: #548fe7;
+}

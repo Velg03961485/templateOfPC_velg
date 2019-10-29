@@ -1,0 +1,30 @@
+
+.account-set-page {
+  .top-box {
+    position: relative;
+    margin-bottom: 20px;
+    height: 33px;
+    border-bottom: 0;
+    .add-btn {
+      position: absolute;
+      top: 0;
+      right: 0px;
+      width: 130px;
+      height: 30px;
+      background-color: #548fe7;
+      border-radius: 2px;
+      color: #fff;
+    }
+  }
+
+}
+.el-form-item__content{
+  line-height: 30px;
+}
+.el-input__inner{
+  height: 30px;
+  line-height: 30px;
+}
+.el-form-item__label{
+  height: 30px;
+}
