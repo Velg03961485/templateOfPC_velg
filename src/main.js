@@ -12,6 +12,8 @@ import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
 
+import 'swiper/dist/css/swiper.css'
+import Swiper from 'vue-awesome-swiper';
 
 import http from './api/http.js'
 
@@ -30,6 +32,7 @@ Vue.use(ElementUI)
 Vue.use(VueQuillEditor)
 Vue.use(globalFunction);
 Vue.use(loadingDemo);
+Vue.use(Swiper);
 
 Vue.filter('date', filters.dateFilter)
 Vue.filter('timeType', filters.timeTypeFilter)
@@ -45,6 +48,7 @@ Vue.filter('employeeRoleInfo',filters.employeeRoleInfo)
 Vue.filter('activityType',filters.activityType)
 Vue.filter('indexText',filters.indexText)
 Vue.filter('cardNameLength',filters.cardNameLength)
+Vue.filter('plusOrMinus',filters.plusOrMinus)
 
 Vue.config.productionTip = false
 

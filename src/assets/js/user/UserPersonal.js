@@ -11,18 +11,8 @@ export default {
   name:'personal',
   data() {
     return {
-      isChangePhone:false,
-      isChangePw:false,
-      //个人信息
-      userForm:{
-        avatar:'',
-        role_name:'',
-        username:'',
-        phone:'',
-      },
-      dialogFormVisible: false,
-      dialogSet:false,
-      saveUnit:'',
+      boxHeight:(document.documentElement.clientHeight - 230) + 'px',
+
       ruleForm: {
         oldPwd:'',
         newPwd:'',
@@ -47,57 +37,17 @@ export default {
           }
         ]
       },
-      dialogFormVisibleTel:false,
-      telForm:{
-        phone:'',
-        code:''
-      },
-      getClickName:'获取验证码',
-      waitTime:60,
-      canClick: true,
-      userPhone:'',
+     
     }
   },
   created:function(){
     this.$data.userPhone = sessionStorage.getItem('userPhone')
-    this.getUserInfo();
+
   },
   methods: {
-    getUserInfo(){
-      let list = {
-        phone:this.$data.userPhone
-      }
-      let qs = require('querystring')
-      userApi.getUserInfo(qs.stringify(list)).then((res) => {
-        if(res.data.code === 200){
-
-          if(res.data.data.avatar === '' || res.data.data.avatar === null || res.data.data.avatar === undefined){
-            this.$data.userForm.avatar = javaPersonal;
-          }else{
-            this.$data.userForm.avatar = res.data.data.avatar;
-          }
-          //角色id 0超级管理员 -1店长-2导购-3收银
-          if(res.data.data.employeeRoleId === '0' || res.data.data.employeeRoleId === 0){
-            this.$data.userForm.role_name = '超级管理员';
-          }else if(res.data.data.employeeRoleId === '1' || res.data.data.employeeRoleId === 1){
-            this.$data.userForm.role_name = '店长';
-          }else if(res.data.data.employeeRoleId === '2' || res.data.data.employeeRoleId === 2){
-            this.$data.userForm.role_name = '导购';
-          }else if(res.data.data.employeeRoleId === '3' || res.data.data.employeeRoleId === 4){
-            this.$data.userForm.role_name = '收银';
-          }
-          this.$data.userForm.username = res.data.data.name;
-          this.$data.userForm.phone = res.data.data.telephone;
-        }else{
-          this.$message.error(res.data.message);
-        }
-      })
-    },
-    fnChangePWD(){
-      this.$data.dialogFormVisible = true;
-    },
+    
     cancel(){
-      this.$data.dialogFormVisible = false;
+
       this.$data.ruleForm.oldPwd = '';
       this.$data.ruleForm.newPwd = '';
       this.$data.ruleForm.reNewPwd = '';
@@ -106,7 +56,7 @@ export default {
       })
     },
     dialogClose(){
-      this.$data.dialogFormVisible = false;
+
       this.$data.ruleForm.oldPwd = '';
       this.$data.ruleForm.newPwd = '';
       this.$data.ruleForm.reNewPwd = '';
@@ -130,7 +80,7 @@ export default {
               // alert('修改成功')
               this.$message.success('修改成功');
               this.$data.ruleForm = {};
-              this.$data.dialogFormVisible = false;
+              
               setTimeout(() =>{
                 this.$refs.ruleForm.resetFields();
               })

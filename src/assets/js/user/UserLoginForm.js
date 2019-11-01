@@ -102,7 +102,7 @@ export default {
         if (valid) {
 
           sessionStorage.setItem('userPhone', this.$data.loginInfo.username);
-          this.$router.push({ path: '/faceRecognition' });
+          this.$router.push({ path: '/defaultImage' });
 
         } else {
           return false

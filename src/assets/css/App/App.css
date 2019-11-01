@@ -88,8 +88,8 @@ table{
   -webkit-border-radius:2px;
   -moz-border-radius:2px;
   border-radius:2px;
-    height: 40px;
-    line-height: 40px;
+    height: 30px;
+    line-height: 30px;
 }
 .el-form-item__label{
     line-height: 30px;
@@ -216,7 +216,7 @@ input::-webkit-inner-spin-button {
 }
 /*弹窗左右间距调整*/
 .el-dialog__body {
-    padding: 30px 49px;
+    padding: 30px 80px 30px 49px;
 }
 /*input输入框*/
 .el-input--mini .el-input__inner {
@@ -681,4 +681,48 @@ input::-webkit-inner-spin-button {
   color: #999999;
   text-align: center;
   margin-bottom: 120px;
+}
+
+
+/*问号标记 共有样式 直接添加在img 标签上就行*/
+.contentFiveCenterTop_aTitImg{
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+}
+
+/*上传图片 60*60  el-upload外层div类名为uploadImg*/
+.uploadImg  .el-upload--picture-card{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #c8c8c8;
+    border-radius: 2px;
+    line-height: inherit;
+}
+.uploadImg  .el-upload--picture-card i{
+    line-height: 60px;
+    font-size: 18px;
+    color: #c8c8c8;
+}
+
+/*日期时间选择器 宽度限制 清除按钮隐藏 */
+.el-range-editor--mini.el-input__inner{
+    width:300px;
+}
+.el-date-editor .el-range-input{
+    width:41%;
+}
+.reminds-customer .el-range__close-icon{
+    display: none;
+}
+
+
+/*轮播 轮播点颜色修改*/
+.swiper-pagination-bullet{
+    opacity: 1;
+    margin: 0 10px;
+    background-color: #0096ff;
+}
+.swiper-pagination-bullet-active{
+    background-color: #fff;
 }
