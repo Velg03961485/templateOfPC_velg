@@ -13,12 +13,7 @@
                          background-color="#fff"
                          text-color="#666666"
                          active-text-color="#457adb" style="height: 70px">
-                    <!--<el-menu-item index="1" style="height: 70px;width: 120px;" class="topMenuStyle" v-if="oneMenu === 1">智客</el-menu-item>-->
-                    <!--<el-menu-item index="2" style="height: 70px;width: 120px;" class="topMenuStyle" v-if="towMenu === 1">智场</el-menu-item>-->
-                    <!--<el-menu-item index="3" style="height: 70px;width: 120px;" class="topMenuStyle" v-if="threeMenu === 1">设置</el-menu-item>-->
-                    <!--<el-menu-item v-for="item in topMenuData" :index="item.index+''" :key="item.index" style="height: 70px;width: 120px;" class="topMenuStyle" v-if="item.isShow === 1">{{item.name}}</el-menu-item>-->
-                    <!--<el-menu-item index="3">我的工作台3</el-menu-item>-->
-                    <!--<el-menu-item index="4">我的工作台4</el-menu-item>-->
+               
                 </el-menu>
             </div>
             <img :src="userImg" alt="" class="loginUserHead">
@@ -29,7 +24,7 @@
                       <i class="el-icon-caret-bottom el-icon--right"></i>
                     </span>
                     <el-dropdown-menu slot="dropdown" style="text-align:center;">
-                        <el-dropdown-item divided @click.native="user_personal">个人中心</el-dropdown-item>
+                        <el-dropdown-item divided @click.native="user_personal">修改密码</el-dropdown-item>
                         <el-dropdown-item divided @click.native="logout" command="logout" >退出</el-dropdown-item>
                     </el-dropdown-menu>
                 </el-dropdown>

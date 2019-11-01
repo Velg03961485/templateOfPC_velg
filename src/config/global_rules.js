@@ -1,5 +1,21 @@
 const rules={
 
+	//客户姓名验证
+	customername(text){
+		return [
+			{ required: true, message: text, trigger: 'blur' },
+			{
+				validator:(rule,value,callback) =>{
+					if(value.match(/^[a-zA-Z\u4E00-\u9FA5]{1,16}$/)){
+						callback();
+					}else{
+						callback("由1-16位的中文、英文组成")
+					}
+				},
+				trigger:'blur'
+			}
+		]
+	},
         //用户名验证
 		username(text){
 			return [

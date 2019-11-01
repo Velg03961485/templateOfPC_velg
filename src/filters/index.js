@@ -262,3 +262,16 @@ export const indexText = (value) => {
   }
   return text;
 };
+
+/***正负数置换***/
+export const plusOrMinus = (value) =>{
+  let text = '';
+  if(value < 0){
+    text = value;
+  }else if(value === 0){
+    text = '';
+  }else if (value > 0){
+    text = '+' + value;
+  }
+  return text;
+};

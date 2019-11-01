@@ -2,14 +2,9 @@ import userApi from '@/api/user.js'
 
   //引入图标地址
 
-import m_guke from '@/assets/images/menu/m_guke.png'
-import m_huodong from '@/assets/images/menu/m_huodong.png'
-import m_juese from '@/assets/images/menu/m_juese.png'
-import m_mendian from '@/assets/images/menu/m_mendian.png'
-import m_quyu from '@/assets/images/menu/m_quyu.png'
-import m_xiaochengxu from '@/assets/images/menu/m_xiaochengxu.png'
-import m_yuangong from '@/assets/images/menu/m_yuangong.png'
-import m_youhuiquan from '@/assets/images/menu/m_youhuiquan.png'
+import culturePng from '@/assets/images/menu/culturePng.png'
+import dataPng from '@/assets/images/menu/dataPng.png'
+import facePng from '@/assets/images/menu/facePng.png'
 
   export default {
     name: 'word-item',
@@ -22,14 +17,9 @@ import m_youhuiquan from '@/assets/images/menu/m_youhuiquan.png'
         tableData: [],
         userPhone:'',
         isCollapse:false,
-        m_guke:m_guke,
-        m_huodong:m_huodong,
-        m_juese:m_juese,
-        m_mendian:m_mendian,
-        m_quyu:m_quyu,
-        m_xiaochengxu:m_xiaochengxu,
-        m_yuangong:m_yuangong,
-        m_youhuiquan:m_youhuiquan,
+        culturePng:culturePng,
+        dataPng:dataPng,
+        facePng:facePng,
         iconUrlHead:'',
       }
     },
@@ -84,7 +74,7 @@ import m_youhuiquan from '@/assets/images/menu/m_youhuiquan.png'
             "name": "智能人脸识别",
             "parent_id": 0,
             "front_url": "",
-            "front_icon": "common/navigation/menuTarget.png",
+            "front_icon": "culturePng.png",
             "childList": [
               {
                 "id": 152,
@@ -109,17 +99,17 @@ import m_youhuiquan from '@/assets/images/menu/m_youhuiquan.png'
               },
             ],
             "no_child": false,
-            "front_icon_url": "m_huodong"
+            "front_icon_url": "culturePng"
           },
           {
             "id": 120,
             "name": "战略数据呈现",
             "parent_id": 0,
             "front_url": "StrategicData",
-            "front_icon": "common/navigation/menuStore.png",
+            "front_icon": "facePng.png",
             "childList": [],
             "no_child": true,
-            "front_icon_url": "m_huodong"
+            "front_icon_url": "facePng"
           },
           {
             "id": 130,
@@ -129,7 +119,7 @@ import m_youhuiquan from '@/assets/images/menu/m_youhuiquan.png'
             "front_icon": "common/navigation/menuStore.png",
             "childList": [],
             "no_child": true,
-            "front_icon_url": "m_huodong"
+            "front_icon_url": "dataPng"
           },
         ]
 
