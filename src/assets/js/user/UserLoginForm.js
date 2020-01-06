@@ -78,7 +78,7 @@ export default {
 
      // this.interTimePost();
     // console.log(this.getUrlParam('code'))
-    
+
 
   },
   mounted: function () {
@@ -102,7 +102,7 @@ export default {
         if (valid) {
 
           sessionStorage.setItem('userPhone', this.$data.loginInfo.username);
-          this.$router.push({ path: '/faceRecognition' });
+          this.$router.push({ path: '/systemPage' });
 
         } else {
           return false

@@ -2,10 +2,9 @@
 <template>
     <div class="main-box">
         <div  class="header-wrap">
-            <div :class="[isCollapse ? 'ml90' : 'ml190' , 'companyPoint']"><img src="../../assets/images/logo_1.png"/></div>
-            <!--<div :class="[isCollapse ? 'ml90' : 'ml190' , 'company']"><img src="../../assets/images/headLogo.png"/></div>-->
-            <div :class="[isCollapse ? 'ml90' : 'ml190' , 'company']"><img src="../../assets/images/welcome.png"/></div>
-            <div class="top-menu" style="float:left;margin-left: 300px;height: 70px">
+            <div :class="[isCollapse ? 'ml90' : 'ml190' , 'companyPoint']"><img src="../../assets/images/logo_2.png" style="width: 40px;height:40px"/></div>
+            <div :class="[isCollapse ? 'ml90' : 'ml190' , 'company']">互宝互巴</div>
+            <div class="top-menu" style="float:left;margin-left: 10px;height: 70px">
                 <el-menu :default-active="horizontalIndex"
                          class="el-menu-demo"
                          mode="horizontal"
@@ -13,12 +12,9 @@
                          background-color="#fff"
                          text-color="#666666"
                          active-text-color="#457adb" style="height: 70px">
-                    <!--<el-menu-item index="1" style="height: 70px;width: 120px;" class="topMenuStyle" v-if="oneMenu === 1">智客</el-menu-item>-->
-                    <!--<el-menu-item index="2" style="height: 70px;width: 120px;" class="topMenuStyle" v-if="towMenu === 1">智场</el-menu-item>-->
-                    <!--<el-menu-item index="3" style="height: 70px;width: 120px;" class="topMenuStyle" v-if="threeMenu === 1">设置</el-menu-item>-->
-                    <!--<el-menu-item v-for="item in topMenuData" :index="item.index+''" :key="item.index" style="height: 70px;width: 120px;" class="topMenuStyle" v-if="item.isShow === 1">{{item.name}}</el-menu-item>-->
-                    <!--<el-menu-item index="3">我的工作台3</el-menu-item>-->
-                    <!--<el-menu-item index="4">我的工作台4</el-menu-item>-->
+
+                    <el-menu-item v-for="(item,index) in topMenuData" :index="index+''" :key="index" style="height: 70px;width: 70px;" class="topMenuStyle" >{{item.name}}</el-menu-item>
+
                 </el-menu>
             </div>
             <img :src="userImg" alt="" class="loginUserHead">

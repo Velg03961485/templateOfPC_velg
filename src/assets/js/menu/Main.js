@@ -1,8 +1,6 @@
 import MenuLeft from '@/views/menu/MenuLeft'
 
-import userApi from '@/api/user.js'
 
-import bannerHead from '@/assets/images/bannerHead.png'
 
 export default {
 
@@ -15,7 +13,7 @@ export default {
   data () {
     return {
         userName:'xxxxx',
-        horizontalIndex: '1',
+        horizontalIndex: '0',
         isCollapse: false,
         leftMenu: {
             leftMenu1:true,
@@ -24,6 +22,20 @@ export default {
             leftMenu4:false
         },
         userImg:'',
+      topMenuData:[
+        {name:'首页',id:1},
+        {name:'企业',id:2},
+        {name:'订单',id:3},
+        {name:'服务',id:4},
+        {name:'创客',id:5},
+        {name:'任务',id:6},
+        {name:'运营',id:7},
+        {name:'内容',id:8},
+        {name:'统计',id:9},
+        {name:'财务',id:10},
+        {name:'设置',id:11},
+        {name:'权限',id:12},
+      ],
     }
 
   },
@@ -55,14 +67,20 @@ export default {
         //   })
       },
     handleSelect(key, keyPath) {
-        var nowKey = "leftMenu"+key;
-        for(var i in this.$data.leftMenu){
-            var nowI = i;
-            this.$data.leftMenu[nowI] = false;
-            if(nowKey == nowI){
-                this.$data.leftMenu[nowI] = true;
-            }
-        }
+        console.log(key)
+        // var nowKey = "leftMenu"+key;
+        // for(var i in this.$data.leftMenu){
+        //     var nowI = i;
+        //     this.$data.leftMenu[nowI] = false;
+        //     if(nowKey == nowI){
+        //         this.$data.leftMenu[nowI] = true;
+        //     }
+        // }
+    /****
+     * 如果是静态菜单，注入不同的模块，如果是动态菜单，点击一级菜单就请求一次数据 获取二级菜单
+     * ****/
+
+
 
     },
     //退等操作

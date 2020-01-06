@@ -7,11 +7,11 @@
 
           <div class="container" >
             <!--顶部商标-->
-            <div class="topBussiness">
-              <img src="../../assets/images/LOGO_dd.png" alt="" class="topBussiness_logoImg">
-              <img src="../../assets/images/dd_name.png" alt="" class="topBussiness_ddImg">
-              <div class="topBussiness_text">{{topText}}</div>
-            </div>
+<!--            <div class="topBussiness">-->
+<!--              <img src="../../assets/images/LOGO_dd.png" alt="" class="topBussiness_logoImg">-->
+<!--              <img src="../../assets/images/dd_name.png" alt="" class="topBussiness_ddImg">-->
+<!--              <div class="topBussiness_text">{{topText}}</div>-->
+<!--            </div>-->
 
 
             <!--默认登录-->
@@ -35,7 +35,7 @@
   height:100%;
   margin-left: 0;
   /*background-color: #002f44;*/
-  background-image: url("../../assets/images/bg2.png");
+  background-image: url("../../assets/images/hbhb_back.png");
   background-size: cover;
   overflow: hidden;
 }
@@ -79,7 +79,7 @@
   height: 354px;
   /*border-radius: 4px;*/
   /*background-color: rgba(255, 255, 255, 0.75);*/
-  margin-top:110px;
+  margin-top:310px;
   /*margin-bottom: 20px;*/
   margin-right: 73px;
 }

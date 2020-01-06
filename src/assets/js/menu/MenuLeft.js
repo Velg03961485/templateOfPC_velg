@@ -14,7 +14,7 @@ import m_youhuiquan from '@/assets/images/menu/m_youhuiquan.png'
   export default {
     name: 'word-item',
     props: {
-      
+
     },
     data() {
       return {
@@ -54,8 +54,8 @@ import m_youhuiquan from '@/assets/images/menu/m_youhuiquan.png'
       getUrl() {
        switch (this.$route.name){
 
-         case "faceRecognition":
-           this.$data.currentMenu = 'faceRecognition';
+         case "systemPage":
+           this.$data.currentMenu = 'systemPage';
            break;
     			default:
     			  this.$data.currentMenu = this.$route.name;
@@ -68,7 +68,7 @@ import m_youhuiquan from '@/assets/images/menu/m_youhuiquan.png'
       handleSelect(index,indexPath){
           // console.log(index);
           // console.log(indexPath)
-        
+
       	this.$router.push({
       		 name:index
       	})
@@ -81,57 +81,85 @@ import m_youhuiquan from '@/assets/images/menu/m_youhuiquan.png'
         _this.$data.tableData = [
           {
             "id": 151,
-            "name": "智能人脸识别",
+            "name": "系统首页",
             "parent_id": 0,
             "front_url": "",
             "front_icon": "common/navigation/menuTarget.png",
             "childList": [
               {
                 "id": 152,
-                "name": "默认图片",
+                "name": "系统首页",
                 "parent_id": 151,
-                "front_url": "defaultImage",
-                "front_icon": null
-              },
-              {
-                "id": 153,
-                "name": "访客类型",
-                "parent_id": 151,
-                "front_url": "visitorsType",
+                "front_url": "systemPage",
                 "front_icon": null
               },
               {
                 "id": 154,
-                "name": "访客列表",
+                "name": "系统信息",
                 "parent_id": 151,
                 "front_url": "visitorsList",
                 "front_icon": null
               },
+              {
+                "id": 153,
+                "name": "账户设置",
+                "parent_id": 151,
+                "front_url": "visitorsType",
+                "front_icon": null
+              },
+
+              // {
+              //   "id": 155,
+              //   "name": "登录日志",
+              //   "parent_id": 151,
+              //   "front_url": "",
+              //   "front_icon": null
+              // },
             ],
             "no_child": false,
             "front_icon_url": "m_huodong"
           },
-          {
-            "id": 120,
-            "name": "战略数据呈现",
-            "parent_id": 0,
-            "front_url": "StrategicData",
-            "front_icon": "common/navigation/menuStore.png",
-            "childList": [],
-            "no_child": true,
-            "front_icon_url": "m_huodong"
-          },
-          {
-            "id": 130,
-            "name": "企业文化宣传",
-            "parent_id": 0,
-            "front_url": "culturePropaganda",
-            "front_icon": "common/navigation/menuStore.png",
-            "childList": [],
-            "no_child": true,
-            "front_icon_url": "m_huodong"
-          },
-        ]
+          // {
+          //   "id": 120,
+          //   "name": "系统首页",
+          //   "parent_id": 0,
+          //   "front_url": "StrategicData",
+          //   "front_icon": "common/navigation/menuStore.png",
+          //   "childList": [],
+          //   "no_child": true,
+          //   "front_icon_url": "m_huodong"
+          // },
+          // {
+          //   "id": 130,
+          //   "name": "账户设置",
+          //   "parent_id": 0,
+          //   "front_url": "culturePropaganda",
+          //   "front_icon": "common/navigation/menuStore.png",
+          //   "childList": [],
+          //   "no_child": true,
+          //   "front_icon_url": "m_huodong"
+          // },
+          // {
+          //   "id": 140,
+          //   "name": "账户设置",
+          //   "parent_id": 0,
+          //   "front_url": "culturePropaganda",
+          //   "front_icon": "common/navigation/menuStore.png",
+          //   "childList": [],
+          //   "no_child": true,
+          //   "front_icon_url": "m_huodong"
+          // },
+          // {
+          //   "id": 150,
+          //   "name": "账户设置",
+          //   "parent_id": 0,
+          //   "front_url": "culturePropaganda",
+          //   "front_icon": "common/navigation/menuStore.png",
+          //   "childList": [],
+          //   "no_child": true,
+          //   "front_icon_url": "m_huodong"
+          // },
+        ];
 
         console.log(_this.$data.tableData)
 

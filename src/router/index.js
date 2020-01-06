@@ -12,8 +12,8 @@ const UserLogin = resolve => require(['@/views/user/UserLogin'],resolve);
 //个人中心
 const UserPersonal = resolve => require(['@/views/user/UserPersonal'],resolve)
 
-//人脸识别
-const defaultImage = resolve => require(['@/views/face/defaultImage'],resolve)
+//首页
+const systemPage = resolve => require(['@/views/systemPage/systemPage'],resolve)
 const visitorsType = resolve => require(['@/views/face/visitorsType'],resolve)
 const visitorsList = resolve => require(['@/views/face/visitorsList'],resolve)
 
@@ -39,9 +39,9 @@ const router = new Router({
       component: Main,
 
       children: [
-        
+
         {path: 'UserPersonal',name: 'UserPersonal',component: UserPersonal},
-        {path: 'defaultImage',name: 'defaultImage',component: defaultImage},
+        {path: 'systemPage',name: 'systemPage',component: systemPage},
         {path: 'visitorsType',name: 'visitorsType',component: visitorsType},
         {path: 'visitorsList',name: 'visitorsList',component: visitorsList},
         {path: 'StrategicData',name: 'StrategicData',component: StrategicData},
